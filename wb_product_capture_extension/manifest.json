@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "WB Product URL Capture",
+  "version": "1.0.0",
+  "description": "Capture Wildberries product URLs while you browse and scroll manually.",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.wildberries.ru/*",
+    "https://wildberries.ru/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "WB Product URL Capture"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.wildberries.ru/*",
+        "https://wildberries.ru/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

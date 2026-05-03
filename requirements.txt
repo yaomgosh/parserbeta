@@ -1,2 +1,2 @@
-playwright>=1.54.0
+selenium>=4.20.0
 pandas>=2.2.0
